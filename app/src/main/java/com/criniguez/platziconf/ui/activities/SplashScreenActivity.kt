@@ -1,4 +1,4 @@
-package com.criniguez.platziconf.ui
+package com.criniguez.platziconf.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
