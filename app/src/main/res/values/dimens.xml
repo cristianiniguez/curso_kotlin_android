@@ -7,4 +7,5 @@
     <dimen name="home_subtitle_margin">10dp</dimen>
 
     <dimen name="title_size">20sp</dimen>
+    <dimen name="subtitle_size">15sp</dimen>
 </resources>
