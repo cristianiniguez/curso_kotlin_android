@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="platzi_logo_height">45dp</dimen>
+    <dimen name="toolbar_height">30dp</dimen>
+    <dimen name="card_corner_radius">4dp</dimen>
+    <dimen name="iv_home_height">150dp</dimen>
+    <dimen name="home_subtitle_margin">10dp</dimen>
+
+    <dimen name="title_size">20sp</dimen>
 </resources>
