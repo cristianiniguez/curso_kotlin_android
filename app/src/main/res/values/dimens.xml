@@ -8,4 +8,7 @@
 
     <dimen name="title_size">20sp</dimen>
     <dimen name="subtitle_size">15sp</dimen>
+
+    <dimen name="item_schedule_title">30sp</dimen>
+    <dimen name="item_schedule_subtitle">20sp</dimen>
 </resources>
