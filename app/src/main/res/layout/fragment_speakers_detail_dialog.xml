@@ -75,6 +75,14 @@
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
+                        <ImageView
+                            android:id="@+id/ivDetailSpeakerTwitter"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/ic_twitter" />
+
                         <TextView
                             android:id="@+id/tvDetailSpeakerDescription"
                             android:layout_width="match_parent"
