@@ -10,7 +10,8 @@ import com.criniguez.platziconf.model.Conference
 import java.text.SimpleDateFormat
 import kotlin.collections.ArrayList
 
-class ScheduleAdapter(val scheduleListener:ScheduleListener) : RecyclerView.Adapter<ScheduleAdapter.ViewHolder>() {
+class ScheduleAdapter(val scheduleListener: ScheduleListener) :
+    RecyclerView.Adapter<ScheduleAdapter.ViewHolder>() {
     var listConferences = ArrayList<Conference>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
@@ -29,6 +30,10 @@ class ScheduleAdapter(val scheduleListener:ScheduleListener) : RecyclerView.Adap
         holder.tvConferenceHour.text = SimpleDateFormat("HH:MM").format(conference.datetime)
         holder.tvConferenceAMPM.text =
             SimpleDateFormat("a").format(conference.datetime).toUpperCase()
+
+        holder.itemView.setOnClickListener {
+            scheduleListener.onConferenceClicked(conference, position)
+        }
     }
 
     override fun getItemCount() = listConferences.size

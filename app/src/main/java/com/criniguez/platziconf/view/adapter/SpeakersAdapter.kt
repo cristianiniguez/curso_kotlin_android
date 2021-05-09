@@ -6,10 +6,12 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.criniguez.platziconf.R
 import com.criniguez.platziconf.model.Speaker
 
-class SpeakersAdapter(speakersListener: SpeakersListener) :
+class SpeakersAdapter(val speakersListener: SpeakersListener) :
     RecyclerView.Adapter<SpeakersAdapter.ViewHolder>() {
     var listSpeakers = ArrayList<Speaker>()
 
@@ -24,7 +26,15 @@ class SpeakersAdapter(speakersListener: SpeakersListener) :
 
         holder.tvSpeakerName.text = speaker.name
         holder.tvSpeakerJobtitle.text = speaker.jobtitle
-        // TODO: holder.ivSpeakerImage.??? = speaker.image
+
+        Glide.with(holder.itemView.context)
+            .load(speaker.image)
+            .apply(RequestOptions.circleCropTransform())
+            .into(holder.ivSpeakerImage)
+
+        holder.itemView.setOnClickListener {
+            speakersListener.onSpeakerClicked(speaker, position)
+        }
     }
 
     override fun getItemCount() = listSpeakers.size
