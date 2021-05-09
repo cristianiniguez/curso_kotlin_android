@@ -1,7 +1,8 @@
-package com.criniguez.platziconf
+package com.criniguez.platziconf.view.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.criniguez.platziconf.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
