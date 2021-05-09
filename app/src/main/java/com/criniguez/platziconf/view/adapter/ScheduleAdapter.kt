@@ -7,9 +7,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.criniguez.platziconf.R
 import com.criniguez.platziconf.model.Conference
+import java.text.SimpleDateFormat
+import kotlin.collections.ArrayList
 
-class ScheduleAdapter() : RecyclerView.Adapter<ScheduleAdapter.ViewHolder>() {
-    var listConference = ArrayList<Conference>()
+class ScheduleAdapter(val scheduleListener:ScheduleListener) : RecyclerView.Adapter<ScheduleAdapter.ViewHolder>() {
+    var listConferences = ArrayList<Conference>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
         LayoutInflater
@@ -17,18 +19,33 @@ class ScheduleAdapter() : RecyclerView.Adapter<ScheduleAdapter.ViewHolder>() {
             .inflate(R.layout.item_schedule, parent, false)
     )
 
-    override fun onBindViewHolder(holder: ScheduleAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val conference = listConferences[position]
+
+        holder.tvConferenceName.text = conference.title
+        holder.tvConferenceSpeaker.text = conference.speaker
+        holder.tvConferenceTag.text = conference.tag
+
+        holder.tvConferenceHour.text = SimpleDateFormat("HH:MM").format(conference.datetime)
+        holder.tvConferenceAMPM.text =
+            SimpleDateFormat("a").format(conference.datetime).toUpperCase()
     }
 
-    override fun getItemCount() = listConference.size
+    override fun getItemCount() = listConferences.size
+
+    fun updateData(data: List<Conference>) {
+        listConferences.clear()
+        listConferences.addAll(data)
+        notifyDataSetChanged()
+    }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvScheduleHour = itemView.findViewById<TextView>(R.id.tvItemScheduleHour)
-        val tvScheduleAMPM = itemView.findViewById<TextView>(R.id.tvItemScheduleAMPM)
         val tvConferenceName = itemView.findViewById<TextView>(R.id.tvItemScheduleConferenceName)
-        val tvScheduleConferenceSpeaker =
+        val tvConferenceSpeaker =
             itemView.findViewById<TextView>(R.id.tvItemScheduleConferenceSpeaker)
-        val tvScheduleConferenceTag =
+        val tvConferenceTag =
             itemView.findViewById<TextView>(R.id.tvItemScheduleConferenceTag)
+        val tvConferenceHour = itemView.findViewById<TextView>(R.id.tvItemScheduleHour)
+        val tvConferenceAMPM = itemView.findViewById<TextView>(R.id.tvItemScheduleAMPM)
     }
 }
