@@ -9,7 +9,7 @@ import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import com.criniguez.platziconf.R
 import com.criniguez.platziconf.model.Speaker
 import com.criniguez.platziconf.view.adapter.SpeakersAdapter
@@ -38,7 +38,7 @@ class SpeakersFragment : Fragment(), SpeakersListener {
         speakersAdapter = SpeakersAdapter(this)
 
         rvSpeakers.apply {
-            layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.VERTICAL, false)
+            layoutManager = GridLayoutManager(context, 2)
             adapter = speakersAdapter
         }
 
@@ -60,6 +60,4 @@ class SpeakersFragment : Fragment(), SpeakersListener {
         val bundle = bundleOf("conference" to speaker)
         findNavController().navigate(R.id.speakersDetailDialogFragment, bundle)
     }
-
-
 }
