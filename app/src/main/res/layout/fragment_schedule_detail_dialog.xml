@@ -9,7 +9,7 @@
         android:layout_height="wrap_content">
 
         <Toolbar
-            android:id="@+id/toolbar_conference"
+            android:id="@+id/toolbarConference"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.appbar.AppBarLayout>

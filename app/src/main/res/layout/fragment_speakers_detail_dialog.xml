@@ -9,7 +9,7 @@
         android:layout_height="wrap_content">
 
         <Toolbar
-            android:id="@+id/toolbar_speaker"
+            android:id="@+id/toolbarSpeaker"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.appbar.AppBarLayout>
@@ -41,6 +41,7 @@
                         android:orientation="vertical">
 
                         <ImageView
+                            android:id="@+id/ivDetailSpeakerImage"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -58,7 +59,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/tvDetailSpeakerJob"
+                            android:id="@+id/tvDetailSpeakerJobtitle"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
@@ -68,6 +69,7 @@
                             android:textSize="15sp" />
 
                         <TextView
+                            android:id="@+id/tvDetailSpeakerWorkplace"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
@@ -86,7 +88,7 @@
                             android:src="@drawable/ic_twitter" />
 
                         <TextView
-                            android:id="@+id/tvDetailSpeakerDescription"
+                            android:id="@+id/tvDetailSpeakerBiography"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"

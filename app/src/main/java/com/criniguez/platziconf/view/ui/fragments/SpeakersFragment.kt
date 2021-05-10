@@ -57,7 +57,7 @@ class SpeakersFragment : Fragment(), SpeakersListener {
     }
 
     override fun onSpeakerClicked(speaker: Speaker, position: Int) {
-        val bundle = bundleOf("conference" to speaker)
+        val bundle = bundleOf("speaker" to speaker)
         findNavController().navigate(R.id.speakersDetailDialogFragment, bundle)
     }
 }
