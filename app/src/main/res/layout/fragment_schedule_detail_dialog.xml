@@ -16,7 +16,8 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -96,10 +97,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
+                            android:layout_gravity="center"
                             android:layout_margin="5dp"
                             android:background="@drawable/shape_topic"
                             android:gravity="center"
-                            android:layout_gravity="center"
                             android:text="Tag"
                             android:textColor="@color/primary"
                             android:textSize="12sp" />

@@ -9,14 +9,15 @@
         android:layout_height="wrap_content">
 
         <Toolbar
-            android:id="@+id/toolbar_location"
+            android:id="@+id/toolbarLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -28,6 +29,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/ivDetailLocationPhoto"
                     android:layout_width="match_parent"
                     android:layout_height="230dp"
                     android:scaleType="centerCrop"
@@ -46,7 +48,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tvDetailConferenceHour"
+                            android:id="@+id/tvDetailLocationName"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
@@ -69,6 +71,7 @@
                                 android:src="@drawable/ic_pin" />
 
                             <TextView
+                                android:id="@+id/tvDetailLocationAddress"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="5dp"
@@ -84,6 +87,7 @@
                             android:background="@color/primary" />
 
                         <LinearLayout
+                            android:id="@+id/llDetailLocationPhone"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -95,6 +99,7 @@
                                 android:src="@drawable/ic_phone" />
 
                             <TextView
+                                android:id="@+id/tvDetailLocationPhone"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="5dp"
@@ -110,6 +115,7 @@
                             android:background="@color/primary" />
 
                         <LinearLayout
+                            android:id="@+id/llDetailLocationWebsite"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/shape_paragraph"
@@ -122,6 +128,7 @@
                                 android:src="@drawable/ic_link" />
 
                             <TextView
+                                android:id="@+id/tvDetailLocationWebsite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="5dp"
