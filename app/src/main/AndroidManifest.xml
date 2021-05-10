@@ -12,11 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAvqN45xZ-9s3MsyUQfzfAOsyVfpkVoQvw" />
         <activity android:name="com.criniguez.platziconf.view.ui.activities.SplashScreenActivity"></activity>
         <activity android:name=".view.ui.activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
