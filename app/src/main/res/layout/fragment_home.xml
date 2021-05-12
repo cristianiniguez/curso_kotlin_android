@@ -31,6 +31,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/iv_home_height"
+                        android:layout_marginTop="1dp"
                         android:src="@drawable/banner_platzi_conf" />
 
                     <View
@@ -61,6 +62,7 @@
                         android:layout_marginLeft="@dimen/home_subtitle_margin"
                         android:layout_marginTop="@dimen/home_subtitle_margin"
                         android:layout_marginRight="@dimen/home_subtitle_margin"
+                        android:layout_marginBottom="10dp"
                         android:text="@string/home_frag_tv_what_answer"
                         android:textColor="@color/primary"
                         android:textSize="@dimen/subtitle_size" />
@@ -114,6 +116,7 @@
                         android:layout_marginLeft="@dimen/home_subtitle_margin"
                         android:layout_marginTop="@dimen/home_subtitle_margin"
                         android:layout_marginRight="@dimen/home_subtitle_margin"
+                        android:layout_marginBottom="10dp"
                         android:text="@string/home_frag_tv_why_answer"
                         android:textColor="@color/primary"
                         android:textSize="@dimen/subtitle_size" />
@@ -167,6 +170,7 @@
                         android:layout_marginLeft="@dimen/home_subtitle_margin"
                         android:layout_marginTop="@dimen/home_subtitle_margin"
                         android:layout_marginRight="@dimen/home_subtitle_margin"
+                        android:layout_marginBottom="10dp"
                         android:text="@string/home_frag_tv_info_answer"
                         android:textColor="@color/primary"
                         android:textSize="@dimen/subtitle_size" />
